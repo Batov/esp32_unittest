@@ -12,12 +12,14 @@
 #include "freertos/task.h"
 #include "esp_system.h"
 #include "esp_spi_flash.h"
-
+#include "sdkconfig.h"
 #include "component_a.h"
 #include "component_b.h"
+#include "unity.h"
 
 void app_main(void)
 {
+#ifndef CONFIG_RUN_UNITTESTS
     printf("Hello world!\n");
 
     /* Print chip information */
@@ -43,4 +45,9 @@ void app_main(void)
     component_b_deinit();
 
     fflush(stdout);
+#else
+    UNITY_BEGIN();
+    unity_run_all_tests();
+    UNITY_END();
+#endif
 }
