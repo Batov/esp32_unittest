@@ -1,0 +1,14 @@
+name: Test
+on:
+  workflow_dispatch:
+env:
+  UNITTESTS: 1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Build and show result
+        uses: batov/esp32_qemu_runner@master
