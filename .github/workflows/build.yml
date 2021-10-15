@@ -9,7 +9,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Build
-        uses: espressif/esp-idf-ci-action@v4.3.1
+        uses: espressif/esp-idf-ci-action@v4.3
       - name: Zip binaries
         run: zip --junk-paths binaries build/hello-world.bin build/bootloader/bootloader.bin build/partition_table/partition-table.bin 
       - name: Prepare artifact
