@@ -8,5 +8,9 @@ list(APPEND EXTRA_COMPONENT_DIRS "component_b")
 list(APPEND TEST_COMPONENTS "component_a")
 list(APPEND TEST_COMPONENTS "component_b")
 
+if(DEFINED ENV{UNITTESTS})
+    set(SDKCONFIG_DEFAULTS "sdkconfig.unittest")
+endif()
+
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(hello-world)

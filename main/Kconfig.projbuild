@@ -1,0 +1,6 @@
+menu "UNITTESTS"
+
+    config RUN_UNITTESTS
+        bool "Run unittest"
+
+endmenu
