@@ -6,6 +6,7 @@ list(APPEND EXTRA_COMPONENT_DIRS "component_a")
 list(APPEND EXTRA_COMPONENT_DIRS "component_b")
 
 list(APPEND TEST_COMPONENTS "component_a")
+list(APPEND TEST_COMPONENTS "component_b")
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(hello-world)
