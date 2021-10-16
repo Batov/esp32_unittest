@@ -13,7 +13,7 @@ TEST_CASE("A 2", test_tag)
     TEST_ASSERT_EQUAL(component_a_increment(100), 101);
 }
 
-TEST_CASE("A 2", test_tag)
+TEST_CASE("A 3", test_tag)
 {
     TEST_ASSERT_EQUAL(component_a_increment(0), 1);
 }
