@@ -14,3 +14,8 @@ jobs:
         uses: batov/esp32_qemu_runner@master
       - name: inspect log
         run: cat report.xml
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+            files: report.xml
